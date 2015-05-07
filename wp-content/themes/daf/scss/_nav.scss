@@ -1,0 +1,77 @@
+//////////////////////////////////
+// Off-Canvas Navigation Styles //
+//////////////////////////////////
+
+// Main page content
+#content {
+  width: 100%;
+  height: 100%;
+  padding-top: 48px;
+  @media (min-width: $bp-med) {
+    padding-top: 72px;
+  }
+  background: $lightest;
+  position: relative;
+  z-index: 200;
+  transition: 0.5s;
+}
+
+div#content {
+  box-shadow: 0 0 3px 2px rgba(68,68,68,0.3);
+}
+
+.push-content {
+  -webkit-transform: translateX(-200px);
+  @media (min-width: $bp-med) {
+    -webkit-transform: translateX(-300px);
+  }
+}
+
+// Navigation hidden under other content
+nav#off-canvas {
+  width: 200px;
+  height: 100vh;
+  background: $dull;
+  position: fixed;
+  right: 0;
+  padding-top: 48px;
+  @media (min-width: $bp-med) {
+    padding-top: 72px;
+    width: 300px;
+  }
+  z-index: 100;
+}
+
+nav {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: $bright;
+  }
+}
+
+#off-canvas {
+  a {
+    background: $dull;
+    display: inline-block;
+    width: 100%;
+
+    &:hover {
+      background: $light;
+    }
+    &.selected {
+      background: $light;
+    }
+
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    @media (min-width: $bp-med) {
+      font-size: 1.4em;
+      padding: 1em 1.4em;
+    }
+  }
+}

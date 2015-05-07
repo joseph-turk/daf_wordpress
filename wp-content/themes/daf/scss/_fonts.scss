@@ -1,0 +1,16 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Slabo 27px', serif;
+}
+
+#content {
+  font-size: 1.2em;
+  line-height: 1.5;
+  @media (min-width: $bp-med) {
+    font-size: 1.4em;
+    line-height: 1.6;
+  }
+}

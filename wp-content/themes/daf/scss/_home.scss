@@ -1,0 +1,22 @@
+.hero {
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+  @media (min-width: $bp-med) {
+    margin-bottom: 3em;
+    max-height: 50vh;
+  }
+}
+
+.date-and-author {
+  margin: 0.5em 0;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.teaser {
+  margin: 0 0 0.5em;
+  @media (min-width: $bp-med) {
+    margin: 0 0 1em;
+  }
+}

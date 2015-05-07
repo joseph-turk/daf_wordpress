@@ -1,0 +1,36 @@
+.album-details {
+  img {
+    margin: 1em 0;
+  }
+  ol {
+    text-align: left;
+    clear: both;
+  }
+  @media (min-width: $bp-med) {
+    margin: 2em 0;
+    img {
+      max-height: 60vh;
+    }
+    .album-title {
+      text-align: right;
+    }
+    .album-year {
+      text-align: left;
+    }
+  }
+}
+
+.download {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-right: 0;
+  @media (min-width: $bp-med) {
+    font-size: 1.1em;
+    width: 80%;
+  }
+  @media (min-width: $bp-lg) {
+    font-size: 1em;
+    width: 100%;
+  }
+}
