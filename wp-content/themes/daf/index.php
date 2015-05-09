@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php define( 'WP_USE_THEMES', false ); get_header(); ?>
 <?php get_sidebar(); ?>
 
 <!-- Hero Image -->
@@ -14,11 +14,13 @@
   </div>
 </div>
 
+<?php $my_query = new WP_Query('showposts=1'); ?>
+
 <?php /* If there are NO posts to display */ ?>
 <?php if ( ! have_posts() ) : ?>
   <div class="row">
     <div class="small-12 columns">
-      <h1>No news yet</h1>
+      <h3>No news yet</h3>
       <p>
         Nothing much happening, I guess.
       </p>
@@ -26,40 +28,38 @@
   </div>
 <?php endif; ?>
 
+
 <?php /* If there ARE posts to display */ ?>
-<?php while ( have_posts() ) : the_post(); ?>
-  <div class="post">
-    <div class="row">
-      <div class="small-6 columns">
-        <h3><?php the_title(); ?></h3>
-      </div>
+<?php while ($my_query->have_posts()) : $my_query->the_post() ?>
 
-      <div class="small-6 columns">
-        <p class="date-and-author">
-          posted <?php the_date(); ?> by <?php the_author(); ?>
-        </p>
-      </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <h3><?php the_title(); ?></h3>
     </div>
+  </div>
 
-    <?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
-            <?php the_excerpt(); ?>
-    <?php else : ?>
-            <?php the_content('Read More'); ?>
-    <?php endif; ?>
+  <div class="row">
+    <div class="small-12 columns">
+      <?php the_excerpt(); ?>
 
-    <div class="dots"></div>
+      <a class="button" href="<?php the_permalink(); ?>">Read More</a>
+    </div>
+  </div>
 
-    <a class="button" href="<?php the_permalink(); ?>">Read More</a>
-  </div><!-- /.post -->
 <?php endwhile; ?>
 
-<?php if ( $wp_query->max_num_pages > 1 ) : ?>
-        <div id="older-posts"><?php next_posts_link('Older Posts'); ?></div>
-        <div id="newer-posts"><?php previous_posts_link('Newer Posts'); ?></div>
-<?php else: ?>
-        <div id="only-page">No newer/older posts</div>
-<?php endif; ?>
 
-<div class="spacer"></div>
+<?php /* If there are NO posts to display */ ?>
+<?php if ( ! have_posts() ) : ?>
+  <div class="row">
+    <div class="small-12 columns">
+      <h3>No news yet</h3>
+      <p>
+        Nothing much happening, I guess.
+      </p>
+    </div>
+  </div>
+<?php endif; ?>
+<!-- /Latest News -->
 
 <?php get_footer(); ?>
