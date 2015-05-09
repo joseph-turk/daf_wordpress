@@ -3,7 +3,7 @@
 
 <!-- Hero Image -->
 <div class="hero">
-  <img src="img/photo-crouch.jpg">
+  <img src="<?php bloginfo('template_directory'); ?>/img/gypsy-moth-banner.jpg">
 </div>
 <!-- /Hero Image -->
 

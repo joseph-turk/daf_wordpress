@@ -11,8 +11,8 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link href='http://fonts.googleapis.com/css?family=Slabo+27px|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
-    <script src="js/vendor/modernizr.js"></script>
+
+    <?php wp_head(); ?>
   </head>
 
   <body>

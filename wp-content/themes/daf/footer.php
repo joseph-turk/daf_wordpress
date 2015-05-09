@@ -6,16 +6,16 @@
     <div class="small-6 columns">
       <ul class="small-block-grid-2 medium-block-grid-4 social">
         <li>
-          <a href="#"><img src="img/logo-soundcloud.png"></a>
+          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo-soundcloud.png"></a>
         </li>
         <li>
-          <a href="#"><img src="img/logo-youtube.png"></a>
+          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo-youtube.png"></a>
         </li>
         <li>
-          <a href="#"><img src="img/logo-twitter.png"></a>
+          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo-twitter.png"></a>
         </li>
         <li>
-          <a href="#"><img src="img/logo-facebook.png"></a>
+          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo-facebook.png"></a>
         </li>
       </ul>
     </div>
@@ -45,17 +45,11 @@
       </p>
     </div>
   </div>
+  <?php wp_footer(); ?>
 </footer>
 <!-- /Footer -->
 
 </div> <!-- /#content -->
 </div> <!-- /.canvas -->
-
-<!-- Vendor Scripts -->
-<script src="js/vendor/jquery.js"></script>
-
-<!-- App Scripts -->
-<script src="js/nav.js"></script>
 </body>
-
 </html>
