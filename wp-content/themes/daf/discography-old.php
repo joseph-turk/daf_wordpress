@@ -1,11 +1,3 @@
-<?php
-$page = 'discography';
-$pageTitle = 'Doubles as a Frisbee | Discography';
-
-include('header.php');
-include('nav.php');
-?>
-
 <!-- Latest Album -->
 <section class="latest-album">
   <a href="album.php">
@@ -110,5 +102,3 @@ include('nav.php');
   </ul>
 </section>
 <!-- /Other Albums -->
-
-<?php include ('footer.php'); ?>

@@ -1,4 +1,14 @@
 <?php
+/*
+Template Name: Album
+*/
+?>
+
+<?php define( 'WP_USE_THEMES', false ); get_header(); ?>
+<?php get_sidebar(); ?>
+
+
+<?php
 $page = 'gypsy-moth';
 $pageTitle = 'Doubles as a Frisbee | Gypsy Moth';
 
@@ -48,4 +58,4 @@ include('nav.php');
   </div>
 </section>
 
-<?php include('footer.php'); ?>
+<?php get_footer(); ?>
