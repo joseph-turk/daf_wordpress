@@ -1923,6 +1923,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
   max-width: 1024px;
+  min-height: 60vh;
   margin: 0 auto;
   background: #EFEFEF; }
 

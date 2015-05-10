@@ -54,6 +54,13 @@ Template Name: News
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="small-7 small-push-5 medium-3 medium-push-9 columns">
+      <?php previous_posts_link('Previous Page'); ?>
+      <?php next_posts_link('Next Page', $article_list->max_num_pages); ?>
+    </div>
+  </div>
 <?php endwhile; ?>
 
 
