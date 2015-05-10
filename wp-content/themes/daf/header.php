@@ -10,8 +10,6 @@
     <!-- link rel="apple-touch-icon" href="apple-touch-icon.png" -->
     <!-- Place favicon.ico in the root directory -->
 
-    <link href='http://fonts.googleapis.com/css?family=Slabo+27px|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
-
     <?php wp_head(); ?>
   </head>
 

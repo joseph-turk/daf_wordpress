@@ -14,7 +14,7 @@ Template Name: Album
         <img src="<?php echo the_field('cover'); ?>">
 
         <div class="small-6 small-centered large-8 large-centered columns">
-          <a href="<?php echo content_url(); ?>/albums/<?php echo  the_field('download_link'); ?>" class="download button">Download</a>
+          <a href="<?php echo  the_field('download_link'); ?>" class="download button">Download</a>
         </div>
       </div>
 

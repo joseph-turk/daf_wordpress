@@ -6,16 +6,16 @@
     <div class="small-6 columns">
       <ul class="small-block-grid-2 medium-block-grid-4 social">
         <li>
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo-soundcloud.png"></a>
+          <a href="https://soundcloud.com/doubles-as-a-frisbee"><img src="<?php bloginfo('template_directory'); ?>/img/logo-soundcloud.png"></a>
         </li>
         <li>
           <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo-youtube.png"></a>
         </li>
         <li>
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo-twitter.png"></a>
+          <a href="https://twitter.com/doublesasafrisb"><img src="<?php bloginfo('template_directory'); ?>/img/logo-twitter.png"></a>
         </li>
         <li>
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo-facebook.png"></a>
+          <a href="https://www.facebook.com/pages/Doubles-as-a-Frisbee/104365924904"><img src="<?php bloginfo('template_directory'); ?>/img/logo-facebook.png"></a>
         </li>
       </ul>
     </div>

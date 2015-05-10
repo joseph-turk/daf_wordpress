@@ -13,6 +13,7 @@ Tags: minimalistic, simple, sidebar, elegant
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Slabo+27px);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -2065,24 +2066,22 @@ nav a {
     .teaser {
       margin: 0 0 1em; } }
 
-.latest-album,
-.other-albums,
+.albums,
 .album-details {
   text-align: center; }
-  .latest-album img,
-  .other-albums img,
+  .albums img,
   .album-details img {
     box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5);
     transition: 0.2s; }
   @media (min-width: 40.063em) {
-    .latest-album img,
-    .other-albums img,
+    .albums img,
     .album-details img {
       max-height: 50vh; } }
 
-.latest-album img:hover,
-.other-albums img:hover {
-  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5); }
+.albums {
+  margin-top: 1em; }
+  .albums img:hover {
+    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5); }
 
 .album-title {
   text-align: left; }
@@ -2090,21 +2089,10 @@ nav a {
 .album-year {
   text-align: right; }
 
-.latest-album {
-  margin-bottom: 2em; }
-  @media (min-width: 40.063em) {
-    .latest-album {
-      margin: 2em 0; }
-      .latest-album img {
-        max-height: 70vh; }
-      .latest-album .album-title {
-        text-align: right; }
-      .latest-album .album-year {
-        text-align: left; } }
-
 .album-details img {
   margin: 1em 0; }
-.album-details ol {
+.album-details ol,
+.album-details p {
   text-align: left;
   clear: both; }
 @media (min-width: 40.063em) {

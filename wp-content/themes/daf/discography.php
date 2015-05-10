@@ -8,7 +8,7 @@ Template Name: Discography
 <?php get_sidebar(); ?>
 
 <!-- Other Albums -->
-<section class="other-albums">
+<section class="albums">
   <ul class="small-block-grid-2 large-block-grid-3">
     <?php
       $albums = get_pages(array('child_of' => 16,
@@ -44,6 +44,6 @@ Template Name: Discography
 
   </ul>
 </section>
-<!-- /Other Albums -->
+<!-- /Albums -->
 
 <?php get_footer(); ?>
