@@ -14,46 +14,28 @@
   </div>
 </div>
 
-<?php $my_query = new WP_Query('showposts=1'); ?>
+<?php $the_query = new WP_Query('showposts=1'); ?>
 
-<?php /* If there are NO posts to display */ ?>
-<?php if ( ! have_posts() ) : ?>
-  <div class="row">
-    <div class="small-12 columns">
-      <h3>No news yet</h3>
-      <p>
-        Nothing much happening, I guess.
-      </p>
+<?php if ( $the_query->have_posts() ) : ?>
+  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <div class="row">
+      <div class="small-12 columns">
+        <h3><?php the_title(); ?></h3>
+      </div>
     </div>
-  </div>
-<?php endif; ?>
 
+    <div class="row">
+      <div class="small-12 columns">
+        <?php the_excerpt(); ?>
 
-<?php /* If there ARE posts to display */ ?>
-<?php while ($my_query->have_posts()) : $my_query->the_post() ?>
-
-  <div class="row">
-    <div class="small-12 columns">
-      <h3><?php the_title(); ?></h3>
+        <a class="button" href="<?php the_permalink(); ?>">Read More</a>
+      </div>
     </div>
-  </div>
-
+  <?php endwhile; ?>
+<?php else : ?>
   <div class="row">
     <div class="small-12 columns">
-      <?php the_excerpt(); ?>
-
-      <a class="button" href="<?php the_permalink(); ?>">Read More</a>
-    </div>
-  </div>
-
-<?php endwhile; ?>
-
-
-<?php /* If there are NO posts to display */ ?>
-<?php if ( ! have_posts() ) : ?>
-  <div class="row">
-    <div class="small-12 columns">
-      <h3>No news yet</h3>
+      <h3>No News Yet</h3>
       <p>
         Nothing much happening, I guess.
       </p>

@@ -18,7 +18,7 @@ Template Name: Discography
       foreach($albums as $album) {
         $album_title = $album->post_title;
         $id = $album->ID;
-        $url = $album->guid;
+        $url = get_page_link($id);
     ?>
 
       <li>
@@ -31,11 +31,11 @@ Template Name: Discography
         </div>
 
         <div class="row">
-          <div class="small-7 columns album-title">
+          <div class="small-8 columns album-title">
             <h4><?php echo $album_title ?></h4>
           </div>
 
-          <div class="small-5 columns album-year">
+          <div class="small-4 columns album-year">
             <h5><?php echo the_field('year', $id); ?></h5>
           </div>
         </div>

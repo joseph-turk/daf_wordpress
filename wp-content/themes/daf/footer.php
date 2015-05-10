@@ -9,7 +9,7 @@
           <a href="https://soundcloud.com/doubles-as-a-frisbee"><img src="<?php bloginfo('template_directory'); ?>/img/logo-soundcloud.png"></a>
         </li>
         <li>
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo-youtube.png"></a>
+          <a href="https://www.youtube.com/results?search_query=doubles+as+a+frisbee"><img src="<?php bloginfo('template_directory'); ?>/img/logo-youtube.png"></a>
         </li>
         <li>
           <a href="https://twitter.com/doublesasafrisb"><img src="<?php bloginfo('template_directory'); ?>/img/logo-twitter.png"></a>
