@@ -3,13 +3,13 @@
   <ul>
     <li>
       <a href="<?php echo get_site_url(); ?>" class="<?php
-        if (is_home()) {
+        if (is_front_page()) {
           echo "selected";
         } ?>">Home</a>
     </li>
     <li>
       <a href="<?php echo get_permalink(54); ?>" class="<?php
-        if (is_page('News')) {
+        if (is_home()) {
           echo "selected";
         } ?>">News</a>
     </li>

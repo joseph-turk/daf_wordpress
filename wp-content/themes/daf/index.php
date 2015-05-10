@@ -1,65 +1,51 @@
 <?php define( 'WP_USE_THEMES', false ); get_header(); ?>
 <?php get_sidebar(); ?>
 
-<!-- Hero Image -->
-<div class="hero">
-  <img src="<?php bloginfo('template_directory'); ?>/img/gypsy-moth-banner.jpg">
-</div>
-<!-- /Hero Image -->
-
-<!-- Latest News -->
 <div class="row">
   <div class="small-12 columns">
-    <h2>Latest News</h2>
+    <h2>News</h2>
   </div>
 </div>
 
-<?php $my_query = new WP_Query('showposts=1'); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <div class="article-block">
+    <div class="row">
+      <div class="small-6 columns">
+        <h3><?php the_title(); ?></h3>
+      </div>
 
-<?php /* If there are NO posts to display */ ?>
-<?php if ( ! have_posts() ) : ?>
+      <div class="small-6 columns">
+        <p class="date-and-author">
+          posted <?php the_date(); ?> by <?php the_author(); ?>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 columns">
+        <?php the_excerpt(); ?>
+
+        <a class="button" href="<?php the_permalink(); ?>">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-7 small-push-5 medium-3 medium-push-9 columns">
+      <?php previous_posts_link('Newer Articles'); ?>
+      <?php next_posts_link('Older Articles') ?>
+    </div>
+  </div>
+
+<?php endwhile; else : ?>
   <div class="row">
     <div class="small-12 columns">
-      <h3>No news yet</h3>
+      <h3>No News Yet</h3>
       <p>
-        Nothing much happening, I guess.
+        Not much going on in DAF land.
       </p>
     </div>
   </div>
 <?php endif; ?>
-
-
-<?php /* If there ARE posts to display */ ?>
-<?php while ($my_query->have_posts()) : $my_query->the_post() ?>
-
-  <div class="row">
-    <div class="small-12 columns">
-      <h3><?php the_title(); ?></h3>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="small-12 columns">
-      <?php the_excerpt(); ?>
-
-      <a class="button" href="<?php the_permalink(); ?>">Read More</a>
-    </div>
-  </div>
-
-<?php endwhile; ?>
-
-
-<?php /* If there are NO posts to display */ ?>
-<?php if ( ! have_posts() ) : ?>
-  <div class="row">
-    <div class="small-12 columns">
-      <h3>No news yet</h3>
-      <p>
-        Nothing much happening, I guess.
-      </p>
-    </div>
-  </div>
-<?php endif; ?>
-<!-- /Latest News -->
 
 <?php get_footer(); ?>
