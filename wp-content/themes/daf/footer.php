@@ -23,13 +23,13 @@
       <nav>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="<?php echo get_site_url(); ?>">Home</a>
           </li>
           <li>
-            <a href="news.php">News</a>
+            <a href="<?php echo get_permalink(54); ?>">News</a>
           </li>
           <li>
-            <a href="discography.php">Discography</a>
+            <a href="<?php echo get_permalink(16); ?>">Discography</a>
           </li>
         </ul>
       </nav>

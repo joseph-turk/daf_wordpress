@@ -5,13 +5,19 @@
   img {
     box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5);
     transition: 0.2s;
-    &:hover {
-      box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5);
-    }
   }
   @media (min-width: $bp-med) {
     img {
       max-height: 50vh;
+    }
+  }
+}
+
+.latest-album,
+.other-albums {
+  img {
+    &:hover {
+      box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5);
     }
   }
 }

@@ -2,20 +2,20 @@
 <nav id="off-canvas">
   <ul>
     <li>
-      <a href="index.php" class="<?php
-        if ($page == 'home') {
+      <a href="<?php echo get_site_url(); ?>" class="<?php
+        if (is_home()) {
           echo "selected";
         } ?>">Home</a>
     </li>
     <li>
-      <a href="news.php" class="<?php
-        if ($page == 'news') {
+      <a href="<?php echo get_permalink(54); ?>" class="<?php
+        if (is_page('News')) {
           echo "selected";
         } ?>">News</a>
     </li>
     <li>
-      <a href="discography.php" class="<?php
-        if ($page == 'discography') {
+      <a href="<?php echo get_permalink(16); ?>" class="<?php
+        if (is_page('Discography')) {
           echo "selected";
         } ?>">Discography</a>
     </li>

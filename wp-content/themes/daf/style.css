@@ -2073,15 +2073,15 @@ nav a {
   .album-details img {
     box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5);
     transition: 0.2s; }
-    .latest-album img:hover,
-    .other-albums img:hover,
-    .album-details img:hover {
-      box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5); }
   @media (min-width: 40.063em) {
     .latest-album img,
     .other-albums img,
     .album-details img {
       max-height: 50vh; } }
+
+.latest-album img:hover,
+.other-albums img:hover {
+  box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5); }
 
 .album-title {
   text-align: left; }

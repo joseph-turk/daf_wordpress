@@ -18,12 +18,13 @@ Template Name: Discography
       foreach($albums as $album) {
         $album_title = $album->post_title;
         $id = $album->ID;
+        $url = $album->guid;
     ?>
 
       <li>
         <div class="row">
           <div class="small-12 columns">
-            <a href="album.php">
+            <a href="<?php echo $url; ?>">
               <img src="<?php echo the_field('cover', $id); ?>">
             </a>
           </div>
