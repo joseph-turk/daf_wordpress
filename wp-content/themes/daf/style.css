@@ -2133,25 +2133,16 @@ nav a {
 .article-block {
   margin-bottom: 1em; }
 
-.support {
-  box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5); }
-
-.support {
-  max-width: 60%;
-  margin: 1em auto;
-  display: block; }
-  @media (min-width: 40.063em) {
-    .support {
-      max-width: 40%; } }
-
-.right {
-  float: right; }
-
-.left {
-  float: left; }
-
 article {
   margin-bottom: 3em; }
+  article img {
+    box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+    max-width: 60%;
+    margin: 1em auto;
+    display: block; }
+    @media (min-width: 40.063em) {
+      article img {
+        max-width: 40%; } }
 
 footer {
   min-height: 5em;
